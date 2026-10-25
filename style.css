@@ -51,8 +51,13 @@ nav a:hover, nav a[aria-current="page"] { color: var(--fg); }
 section { padding: 72px 0; }
 h1, h2, h3 { font-weight: 400; line-height: 1.25; }
 h2 { font-size: clamp(26px, 3.5vw, 34px); margin: 0 0 24px; }
-.about { display: grid; grid-template-columns: minmax(220px, 340px) 1fr; gap: 56px; align-items: center; }
-.about img { border-radius: 14px; width: 100%; aspect-ratio: 1; object-fit: cover; }
+.about { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: start; }
+.about img {
+  width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: center 30%;
+  border-radius: 14px; box-shadow: 0 10px 30px rgba(60, 40, 25, .15);
+}
+.about > div { max-width: 640px; }
+.about h1, .about h2 { margin-top: 0; }
 .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: 13px; color: var(--accent); margin: 0 0 8px; }
 
 .btn {
@@ -100,6 +105,7 @@ footer .wrap { display: flex; justify-content: space-between; align-items: cente
 
 @media (max-width: 760px) {
   .about, .columns { grid-template-columns: 1fr; gap: 28px; }
+  .about img { max-width: 240px; margin-inline: auto; border-radius: 50%; }
   section { padding: 48px 0; }
   nav a:first-child { margin-left: 0; }
 }
