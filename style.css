@@ -95,7 +95,8 @@ h2 { font-size: clamp(26px, 3.5vw, 34px); margin: 0 0 24px; }
 footer { border-top: 1px solid #eee; padding: 28px 0; font-size: 14px; color: var(--muted); }
 footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
 .social { display: flex; gap: 14px; align-items: center; }
-.social img { width: 28px; height: 28px; object-fit: contain; }
+.social a { color: var(--fg); display: grid; place-items: center; transition: color .2s; }
+.social a:hover { color: var(--accent); }
 
 .float-wa {
   position: fixed; right: 18px; bottom: 18px; width: 56px; height: 56px; border-radius: 50%;
